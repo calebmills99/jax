@@ -225,7 +225,8 @@ def update_step(params, x_data, y_data, learning_rate):
     return new_params
 
 # Start fresh
-params = jax.random.normal(key, (2,))
+key, subkey = jax.random.split(key)
+params = jax.random.normal(subkey, (2,))
 learning_rate = 0.01
 
 # Train for 1000 steps

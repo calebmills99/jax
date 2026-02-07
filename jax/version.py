@@ -16,7 +16,7 @@
 # eval()-ed by setup.py, so it should not have any dependencies.
 
 __version__ = "0.3.22"
-_minimum_jaxlib_version = "0.3.15"
+_minimum_jaxlib_version = "0.4.17"
 
 def _version_as_tuple(version_str):
   return tuple(int(i) for i in version_str.split(".") if i.isdigit())

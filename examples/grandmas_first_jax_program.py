@@ -225,7 +225,7 @@ params = jax.random.normal(key, (2,))
 learning_rate = 0.01
 
 # Train for 1000 steps
-print("Step  |  Multiplier  |  Add Amount  |  Mistake Score")
+print("Step  |   Multiplier   |   Add Amount   |   Mistake Score")
 print("-" * 60)
 
 for step in range(1001):

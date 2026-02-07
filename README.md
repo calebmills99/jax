@@ -20,6 +20,8 @@
 JAX is [Autograd](https://github.com/hips/autograd) and [XLA](https://www.tensorflow.org/xla),
 brought together for high-performance machine learning research.
 
+> **🎓 New to JAX and machine learning?** Check out our [Beginner's Guide](docs/GRANDMAS_GUIDE.md) where we explain JAX concepts in simple, everyday language with relatable examples!
+
 With its updated version of [Autograd](https://github.com/hips/autograd),
 JAX can automatically differentiate native
 Python and NumPy functions. It can differentiate through loops, branches,
@@ -72,6 +74,7 @@ perex_grads = jit(vmap(grad_loss, in_axes=(None, 0, 0)))  # fast per-example gra
 ```
 
 ### Contents
+* [**New to JAX? Start here!**](docs/GRANDMAS_GUIDE.md) - JAX explained in simple terms 🎓
 * [Quickstart: Colab in the Cloud](#quickstart-colab-in-the-cloud)
 * [Transformations](#transformations)
 * [Current gotchas](#current-gotchas)
@@ -102,6 +105,8 @@ networks](https://github.com/google/jax/tree/main/jax/example_libraries/README.m
 and [`optimizers` for first-order stochastic
 optimization](https://github.com/google/jax/tree/main/jax/example_libraries/README.md#first-order-optimization),
 or the [examples](https://github.com/google/jax/tree/main/examples).
+
+**For absolute beginners:** Try our [step-by-step beginner example](examples/grandmas_first_jax_program.py) with detailed explanations!
 
 ## Transformations
 

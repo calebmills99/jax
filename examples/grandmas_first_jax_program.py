@@ -28,7 +28,6 @@ Think of it like this:
 That's what the computer will learn to do!
 """
 
-import jax
 import jax.numpy as jnp
 from jax import grad, jit
 

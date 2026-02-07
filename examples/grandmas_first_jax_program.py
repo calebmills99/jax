@@ -32,38 +32,43 @@ import jax
 import jax.numpy as jnp
 from jax import grad, jit
 
-print("=" * 60)
-print("GRANDMA'S COMPUTER CLASS: Teaching a Computer to Learn")
-print("=" * 60)
-print()
 
-# ============================================================================
-# STEP 1: Create some example data
-# ============================================================================
-print("STEP 1: Making Some Examples")
-print("-" * 40)
+def main() -> None:
+    print("=" * 60)
+    print("GRANDMA'S COMPUTER CLASS: Teaching a Computer to Learn")
+    print("=" * 60)
+    print()
 
-# Let's say we have a secret rule: y = 2*x + 3
-# We'll make some examples where we know the answer
-examples_x = jnp.array([1.0, 2.0, 3.0, 4.0, 5.0])  # Input numbers
-examples_y = jnp.array([5.0, 7.0, 9.0, 11.0, 13.0])  # Correct answers
+    # ============================================================================
+    # STEP 1: Create some example data
+    # ============================================================================
+    print("STEP 1: Making Some Examples")
+    print("-" * 40)
 
-print("Here are our teaching examples:")
-print("Input  -> Output")
-for x, y in zip(examples_x, examples_y):
-    print(f"{x:5.1f} -> {y:5.1f}")
+    # Let's say we have a secret rule: y = 2*x + 3
+    # We'll make some examples where we know the answer
+    examples_x = jnp.array([1.0, 2.0, 3.0, 4.0, 5.0])  # Input numbers
+    examples_y = jnp.array([5.0, 7.0, 9.0, 11.0, 13.0])  # Correct answers
 
-print()
-print("Can you see the pattern?")
-print("(Hint: Each output is the input times 2, plus 3)")
-print()
+    print("Here are our teaching examples:")
+    print("Input  -> Output")
+    for x, y in zip(examples_x, examples_y):
+        print(f"{x:5.1f} -> {y:5.1f}")
 
-# ============================================================================
-# STEP 2: Create the computer's "brain" (the parameters it will learn)
-# ============================================================================
-print("STEP 2: Setting Up the Computer's Brain")
-print("-" * 40)
+    print()
+    print("Can you see the pattern?")
+    print("(Hint: Each output is the input times 2, plus 3)")
+    print()
 
+    # ============================================================================
+    # STEP 2: Create the computer's "brain" (the parameters it will learn)
+    # ============================================================================
+    print("STEP 2: Setting Up the Computer's Brain")
+    print("-" * 40)
+
+
+if __name__ == "__main__":
+    main()
 # The computer needs to learn two numbers:
 # - The multiplier (we want it to learn 2.0)
 # - The amount to add (we want it to learn 3.0)

@@ -29,9 +29,11 @@ Our computer program does the exact same thing!
 #### Step 1: Setting Up the "Brain" (Neural Network)
 
 ```python
+import numpy.random as npr
+
 def init_random_params(scale, layer_sizes, rng=npr.RandomState(0)):
   return [(scale * rng.randn(m, n), scale * rng.randn(n))
-          for m, n, in zip(layer_sizes[:-1], layer_sizes[1:])]
+          for m, n in zip(layer_sizes[:-1], layer_sizes[1:])]
 ```
 
 **What's happening here?**
